@@ -25,6 +25,7 @@ class UserController extends Controller
         ];
 
         if(Auth::attempt($datalogin)){
+            $request->session()->regenerate();
             if(Auth::user()->role == 'Admin'){
                 return redirect()->intended('Admin');
             }else if(Auth::user()-> role == 'Customer'){

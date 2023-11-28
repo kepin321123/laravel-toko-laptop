@@ -12,7 +12,9 @@
 
 
 
-    <h1 class=" ml-56 text-3xl mt-5 font-semibold">Selamat Datang</h1>
+    <h1 class=" ml-56 text-3xl mt-5 font-semibold">Selamat Datang @auth
+        {{ Auth::user()->username }}
+    @endauth</h1>
 
 
 
